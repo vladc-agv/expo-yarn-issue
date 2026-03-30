@@ -1,0 +1,13 @@
+diff --git a/dist/h3-js.js b/dist/h3-js.js
+index c99a1a11a0e3fee6c0eb0fefad03fee5a68ffe97..7af963611701f83e5130f0e0f4c4fdfd1cd30c8e 100644
+--- a/dist/h3-js.js
++++ b/dist/h3-js.js
+@@ -37,6 +37,8 @@ var libh3 = function (libh3) {
+   var read_, readAsync, readBinary;
+ 
+   if (ENVIRONMENT_IS_NODE) {
++    const __filename = require("url").fileURLToPath(import.meta.url);
++    const __dirname = require("path").dirname(__filename);
+     scriptDirectory = __dirname + "/";
+     var nodeFS;
+     var nodePath;
